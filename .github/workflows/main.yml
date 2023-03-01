@@ -21,14 +21,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm i -g yarn
-          yarn
+          /home/asaje/.nvm/versions/node/v18.14.2/bin/yarn 
 
       - name: build
         run: |
-          yarn build
+          /home/asaje/.nvm/versions/node/v18.14.2/bin/yarn build
 
       - name: deploy
         run: |
-          npm i -g pm2
-          pm2 start dist/main.js --name logger
+          /home/asaje/.nvm/versions/node/v18.14.2/bin/pm2 start dist/main.js --name logger
