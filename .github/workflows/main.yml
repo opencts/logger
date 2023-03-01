@@ -1,0 +1,21 @@
+name: Logger workflow
+
+on:
+  push:
+    branches:
+    - develop
+    - main
+    
+  workflow_dispatch:
+    
+jobs:
+  build:
+    name: build
+    runs-on: self-hosted
+    
+    steps: 
+    - uses: actions/checkout@v3
+    
+    - name: build
+      run: |
+        yarn build
